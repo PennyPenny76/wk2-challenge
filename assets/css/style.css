@@ -1,0 +1,244 @@
+:root {
+    --dark: rgb(117,185,190);
+    --skybule: rgb(168,204,201);
+    --sky:rgb(179,214,198);
+    --light:rgb(220,234,178);
+    --grass:rgb(199,214,109);
+    --grey:rgb(255, 255, 250);
+    --textgrey:rgb(97,92,99);
+
+}
+
+html {
+    /* set 1rem to 10px instead of native 16px to make it easier 
+    to calculate font-size values for the rest of the page 
+    (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
+}
+
+body {
+    /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+    font-family: Century-Gothic, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  
+    /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--textgrey);
+    background-color: white;
+    
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  color: var(--textgrey);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+  /* 4rem = 40px (4 * 10px) */
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.header-home {
+    background: linear-gradient(65deg, var(--grey) 50%, var(--grass) 0);       
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 62%;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+/* set title page styles */
+header div .page-title {
+    font-size: 1.7rem;
+    letter-spacing: 0.4rem;
+}
+
+/* set "folio" styles */
+header div .color-grass {
+    color:var(--grass);
+    font-weight: bolder;
+    letter-spacing: 0.45rem;
+}
+
+/* set nav styles */
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    text-transform:uppercase;
+}
+
+/* set home-photo as a section */
+div .row {
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+/* set contact icons width */
+div .icons-vertical{
+    width: 19%; 
+    height:min-content;
+    
+}
+
+.row .name {
+    width: 31%;
+    margin-left: 2.5rem;
+}
+
+.row .person-photo {
+    width:31%;
+    display: flex;
+    justify-content: center;
+}
+
+.icons-vertical ul {
+    border: 0.5px solid rgb(0, 0, 0);
+    width: min-content;
+    opacity:40%;
+    padding: 0.5rem 0 0.5rem 0;
+    margin-left: 6rem;
+    border-radius: 5rem;
+}
+ul .icon {
+    height:3.2rem;
+    padding:0.3rem 0.1rem 0.3rem 0.1rem;
+}
+
+.person-photo img {
+    width:90%;    
+}
+
+.name ul {
+    width:80%;
+}
+.name ul h3 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    color: var(--sky);
+}
+
+.name ul h1 {
+    font-size: 4rem;
+    color: var(--grass);
+    letter-spacing: 0.2rem;
+}
+
+.name ul p {
+    font-size: 1.25rem;
+    margin-top:1rem;
+    color: var(--textgrey);
+    letter-spacing: 0.1rem;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 62%;
+    margin: 5rem auto 0 auto;
+}
+
+.about .about-photo {
+    display: flex;
+    justify-content: start;
+    width:50%;
+    
+}
+
+.about .about-text {
+    display: flex;
+    justify-content:end;
+    width:50%;
+    flex-direction: column;
+}
+
+.about-photo img {
+    width:80%;      
+}
+
+
+.about-text h3 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: var(--sky); 
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    color: var(--grass);
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem
+}
+
+.experience {
+    width:90%;
+    
+}
+
+.about-text .about-align{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.portfolio-title {
+    text-align: center;
+    width: 62%;
+    margin: 5rem auto 0 auto;
+}
+.portfolio-title h3 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: var(--sky); 
+
+}
+
+.portfolio-title h1 {
+    font-size: 2.5rem;
+    color: var(--grass);
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem
+    
+}
