@@ -4,7 +4,7 @@
     --sky:rgb(179,214,198);
     --light:rgb(220,234,178);
     --grass:rgb(199,214,109);
-    --grey:rgb(255, 255, 250);
+    --grey:rgb(252, 252, 249);
     --textgrey:rgb(97,92,99);
 
 }
@@ -35,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0rem;
   color: var(--textgrey);
   font-weight: 700;
   line-height: 1.1;
@@ -72,6 +72,7 @@ p {
 
 .header-home {
     background: linear-gradient(65deg, var(--grey) 50%, var(--grass) 0);       
+    
 }
 
 .top-header {
@@ -81,6 +82,7 @@ p {
     width: 62%;
     margin: 0 auto;
     padding: 2.5rem;
+    flex-wrap: wrap;
 }
 
 /* set title page styles */
@@ -110,16 +112,13 @@ nav a {
 /* set home-photo as a section */
 div .row {
     display: flex;
-    align-items: center;
-    
-    
+    align-items: center;   
 }
 
 /* set contact icons width */
 div .icons-vertical{
     width: 19%; 
-    height:min-content;
-    
+    height:min-content;   
 }
 
 .row .name {
@@ -134,7 +133,7 @@ div .icons-vertical{
 }
 
 .icons-vertical ul {
-    border: 0.5px solid rgb(0, 0, 0);
+    outline: 0.5px solid rgb(0, 0, 0);
     width: min-content;
     opacity:40%;
     padding: 0.5rem 0 0.5rem 0;
@@ -201,44 +200,524 @@ ul .icon {
 
 .about-text h3 {
     font-size: 2rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
     color: var(--sky); 
 }
 
 .about-text h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--grass);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
     margin-bottom: 3rem
 }
 
 .experience {
-    width:90%;
+    /* width:90%; */
+    width: 100%;
+    height:auto;
     
-}
-
-.about-text .about-align{
-    display: flex;
-    justify-content: end;
-    flex-direction: column;
 }
 
 .portfolio-title {
     text-align: center;
     width: 62%;
-    margin: 5rem auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 .portfolio-title h3 {
     font-size: 2rem;
     letter-spacing: 0.1rem;
     color: var(--sky); 
-
+    padding-top: 10rem;
+    
 }
 
 .portfolio-title h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: var(--grass);
-    letter-spacing: 0.1rem;
-    margin-bottom: 3rem
+    letter-spacing: 0.2rem;
+    margin-bottom: 10rem
     
+}
+.portfolio-background {
+    background-color:var(--grey);
+}
+
+.portfolio-card{
+    display:flex;
+    justify-content:center;  
+    
+}
+.portfolio-row {
+    width:62%;    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 10rem
+}
+
+.portfolio-row .justify-center {
+    justify-content: center;
+  }
+
+.card-column {
+margin: 0.9rem;
+/* when the screen resizes, make it so our columns don't jump in size */
+transition: flex-basis 500ms linear;
+display: flex;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 19vw;
+    padding: 0 2rem 0 auto;
+    color: var(--grey);
+    outline: 1px solid grey;
+    transition: all 0.5s ease-in-out;
+    border-radius: 8px;
+    text-align: right;
+}
+
+.card-column :hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
+
+.card-css {
+    min-width:40vw;
+    background-image: url("../images/portfolio_1.JPG");
+    background-size:cover;
+}
+
+.card-photography {
+    min-width:19.5vw;
+    background-image: url("../images/portfolio_2.JPG");
+    background-size:cover;
+}
+
+.card-archi {
+    min-width:19.5vw;    
+    background-image: url("../images/portfolio_3.JPG");
+    background-size:cover;
+}
+
+.card-drawing {
+    min-width:19.5vw;
+    background-image: url("../images/portfolio_4.JPG");
+    background-size:cover;
+}
+
+.card-structure {
+    min-width:19.5vw;
+    background-image: url("../images/portfolio_5.JPG");
+    background-size:cover;
+}
+
+.card-column h6 {
+    background-color:white;
+    opacity:0.5;
+}
+
+.card-column a {
+    background-color:white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity:0.95;
+}
+
+/* .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.contact-row {
+    min-height: 18vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 62%;
+    margin: 5rem auto 5rem auto;
+    flex-wrap: wrap;
+}
+
+.column-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    padding-left:5rem;
+}
+
+.column-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    padding-right:5rem;
+}
+
+.contact-title h3 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    color: var(--sky);
+}
+
+.contact-title h1 {
+    font-size: 4rem;
+    color: var(--grass);
+    letter-spacing: 0.2rem;
+}
+
+.contact-list {
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color:var(--grass);
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3 {
+    color:white;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+.card-css {
+    min-width:100%;
+    flex:1 0 100%;}
+.card-photography {
+    min-width:50%;
+    flex:1 0 50%;}
+
+.card-archi {
+    min-width:50%;
+    flex:1 0 50%;}
+.card-drawing {
+    min-width:50%;
+    flex:1 0 50%;}
+.card-structure {
+    min-width:50%;
+    flex:1 0 50%;}
+
+.portfolio-row {
+    width:70%;    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 10rem;
+    justify-content: center;
+}
+
+.card-column{
+    width: 26vw;
+}
+
+.card {
+    min-height: 26vw;
+}
+
+
+
+.card-column h6 {
+    font-size: 1rem;
+}
+
+.card-column a {
+    background-color:white;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+   
+}
+.top-header {
+flex-direction: column;
+width: 90%;
+}
+header div .color-grass,
+nav a{
+    color: white;
+}
+
+nav a {
+    color: white;
+    padding: 14px 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    text-transform:uppercase;
+}
+.header-home {
+    background: var(--grass);
+}
+div .row,
+.about {
+    flex-direction: column;
+    }
+
+.vertical-bar-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.vertical-bar-block li a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons-vertical ul {
+    outline: 0.5px solid rgb(0, 0, 0);
+    outline-offset: -0.9rem;
+    min-width: 100%;
+    opacity:30%;
+    padding: -1rem;
+    margin: 0;
+    border-radius: 2rem;
+    margin-left: 0;
+}
+div .icons-vertical {
+    width:50%;
+    }
+
+.row .name {
+    width: 60%;
+    margin-left:0;
+    margin-top:5rem;
+    margin-bottom:5rem;
+}
+
+.row .person-photo {
+    width:60%;
+    display: flex;
+    justify-content: center;
+}
+
+.name ul h3 {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    color: white;
+}
+
+.name ul h1 {
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+.name ul p {
+    font-size: 1rem;
+    margin-top:1rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    width: 70vw;
+}
+
+.about {
+    width: 90%;
+}
+
+.about .about-photo {
+    width:70%;   
+}
+
+.about .about-text {
+    width:90%;
+    margin-top:3rem;
+}
+
+.about-photo img {
+    width:80%;      
+}
+
+
+.about-text h3 {
+    font-size: 1rem;
+}
+
+.about-text h1 {
+    font-size: 2rem;   
+}
+
+.experience {
+    /* width:90%; */
+    width: 100%;
+    height:auto;
+    margin-bottom: 3rem;
+}
+
+.contact-title h3 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.contact-title h1 {
+    font-size: 3rem;
+    
+}
+
+.contact-list {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.column-left {
+   
+    min-width: 100%;
+    padding-left:0rem;
+}
+
+.column-right {
+    min-width: 100%;
+    padding-right:0rem;
+
+}
+footer h3 {
+    color:white;
+    font-size: 1.2rem;
+}
+}
+
+@media screen and  (min-width: 768px) and (max-width: 922px) {
+.card-css {
+    min-width:100%;
+    flex:1 0 100%;}
+.card-photography {
+    min-width:50%;
+    flex:1 0 50%;}
+
+.card-archi {
+    min-width:50%;
+    flex:1 0 50%;}
+.card-drawing {
+    min-width:50%;
+    flex:1 0 50%;}
+.card-structure {
+    min-width:50%;
+    flex:1 0 50%;}
+
+.portfolio-row {
+    width:70%;    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 10rem;
+    justify-content: center;
+}
+
+.card-column{
+    width: 26vw;
+}
+
+.card {
+    min-height: 26vw;
+}
+
+.portfolio-row {
+    width:70%;    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 10rem;
+    justify-content: center;
+}
+
+.top-header {
+    width: 90%;
+}
+div .icons-vertical {
+    margin-left: 1rem;
+    width:12%;
+}
+.icons-vertical ul {
+    margin-left: 3rem;
+   
+}
+
+.row .name {
+    width: 33.5%;
+    margin-left: 1rem;
+}
+
+.row .person-photo {
+    width:45%;
+    display: flex;
+    justify-content: start;
+}
+
+.about {
+    width: 90%;
+    margin: 1rem auto 0 auto;
+}
+
+.about .about-photo {
+    width:60%;   
+}
+
+.about .about-text {
+    width:90%;
+    margin-top:3rem;
+}
+
+.about-photo img {
+    width:80%;      
+}
+
+
+.about-text h3 {
+    font-size: 2rem;
+}
+
+.about-text h1 {
+    font-size: 3rem;  
+    margin-bottom: 1rem; 
+}
+
+.experience {
+    /* width:90%; */
+    width: 100%;
+    height:auto;
+    margin-bottom: 3rem;
+}
+
+.contact-title h3 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.contact-title h1 {
+    font-size: 4rem;
+    
+}
+
+.contact-list {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.column-left {
+   
+    min-width: 100%;
+    padding-left:0rem;
+}
+
+.column-right {
+    min-width: 100%;
+    padding-right:0rem;
+
+}
+footer h3 {
+    color:white;
+    font-size: 2rem;
+}
+
 }
